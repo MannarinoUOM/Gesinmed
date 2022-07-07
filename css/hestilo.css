@@ -1,0 +1,32 @@
+.hcontenedor_blanco{position:relative;overflow:hidden;padding:10px;}
+
+
+.hsuper_menu{position:absolute;width:98.5%;height:280px;background-color:rgba(0,0,0,0.8);	
+	-webkit-transition: margin-left 0.2s linear 0s;
+	-moz-transition: margin-left 0.2s linear 0s;
+	-ms-transition: margin-left 0.2s linear 0s;
+	-o-transition: margin-left 0.2s linear 0s;
+	transition: margin-left 0.2s linear 0s;
+margin-left:100%
+}
+
+
+.h2super_menu:hover{margin-left:20%}
+.hsuper_botones{width:40%;float:left;margin-left:10px;}
+.hsuper_botones div{color:#fff;height:20px;padding:3px;}
+.hsuper_botones div:hover{background-color:#fff;color:#333;cursor:pointer}
+.hsuper_menu_datos{margin-left:13px;background-color:#202020;width:76%;}
+.formvertical{margin-right:10px;display:block;}
+.formhorizontal{margin-right:10px;display:inline-block;}
+.hform div{display:inline-block;margin-right:10px;width:150px;text-align:right;}
+.hformsinwidth div{display:inline-block;margin-right:10px;text-align:left;}
+.hpill{height:20px;padding:5px 10px 5px 10px;display:inline-block;margin-right:5px;font-size:13px;border-radius:5px;}
+.hpill_amarillo{background-color:#FFFFCC;}
+.hpill_verde{background-color:#EDFCD6}
+.hpill_celeste{background-color:#B9E9FF}
+.hpill span{font-weight:bold;}
+
+.hsuper_menu_Accion
+{
+    margin-left:20%;
+}

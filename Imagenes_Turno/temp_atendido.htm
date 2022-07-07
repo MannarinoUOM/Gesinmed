@@ -1,0 +1,130 @@
+﻿<script>
+
+
+    function CARGAR_PROBLEMAS_ITEMS(Cargado) {
+        var json = JSON.stringify({ "ProblemaID": 0 })
+
+        $.ajax({
+            type: "POST",
+            data: json,
+            url: "../Json/Imagenes/Imagenes.asmx/IMG_TURNO_LISTAR_PROBLEMAS_ITEMS",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (Resultado) {
+                var Datos = Resultado.d;
+                $('#cbo_problema').empty();
+                $('#cbo_problema').append($('<option></option>').val("0").html(""));
+                $.each(Datos, function (index, dato) {
+                    $('#cbo_problema').append($('<option></option>').val(dato.MOTIVO_PROBLEMA).html(dato.COMENTARIO));
+                });                
+                $("#cbo_problema").val(Cargado);
+            },
+            error: errores
+        });
+
+    }
+
+
+    
+
+    function Cargar_Template(Turno, Especialidad) {
+
+        var json = JSON.stringify({ "TurnoId": Turno, "Especialidad": Especialidad })
+        $.ajax({
+            type: "POST",
+            url: "../Json/Imagenes/Imagenes.asmx/IMG_PLANTILLA_ESPECIALIDAD_LISTAR",
+            data: json, contentType: "application/json; charset=utf-8", dataType: "json", success: function (Resultado) {
+                Array_PLANTILLA = []; var Datos = Resultado.d;
+                var salida = "";
+                $.each(Datos, function (index, dato) {
+                    var Objeto = {};
+                    Objeto.InsumoId = dato.InsumoId;
+                    Objeto.Insumo = dato.Insumo;
+                    Objeto.Cantidad = dato.Cantidad;
+                    Objeto.Modificado = 0;
+                    Array_PLANTILLA.push(Objeto);
+                    salida = salida + "<tr><td>" + Objeto.Insumo + "</td><td><input type='text' data-insumoid='" + Objeto.InsumoId + "'  value='" + Objeto.Cantidad + "'></td></tr>";
+
+                });
+                $("#temp_tabla").html(salida);
+            },
+            error: errores
+        });
+
+    }
+
+    function Guardar_Template() {
+        CambiarEstado(TurnoId, 6, true);
+        var array = [];
+        $('#temp_tabla input').each(          
+          function (index) {
+            var input = $(this);
+            var objeto = {};
+            objeto.InsumoId = $(this).data("insumoid");
+            objeto.Cantidad = input.val();
+            array.push(objeto);
+        });
+
+        var Recitar = false;        
+
+        var json = JSON.stringify({ "TurnoId": TurnoId, "Especialidad": $("#cbo_especialidad").val(), "Practicas": array, "Comentario": $("#txt_temp_eco_comentario").val(), "InformarProblema": $("#cbo_problema :selected").val(), "Recitar": Recitar })
+        $.ajax({
+            type: "POST",
+            url: "../Json/Imagenes/Imagenes.asmx/IMG_PLANTILLA_ESPECIALIDAD_GUARDAR",
+            data: json, contentType: "application/json; charset=utf-8", dataType: "json", success: function (Resultado) {
+                var Datos = Resultado.d;
+                OcultarCargaDatos();
+                ActualizarMensaje("Consumo Guardado", "Los datos del consumo han sido guardado.");
+                //Guardado
+            },
+            error: errores
+        });
+
+    }
+
+
+    function Cargar_Comentario(Turno)
+    {
+    var json = JSON.stringify({"TurnoId": Turno});
+    $.ajax({
+        type: "POST",
+        url: "../Json/Imagenes/Imagenes.asmx/IMG_PLANTILLA_ESPECIALIDAD_CAB_LISTAR",
+        data: json, contentType: "application/json; charset=utf-8", dataType: "json", success: function (Resultado) {
+            var Datos = Resultado.d;            
+            $("#txt_temp_eco_comentario").val(Datos.COMENTARIO);
+            CARGAR_PROBLEMAS_ITEMS(Datos.MOTIVO_PROBLEMA);
+        },
+        error: errores
+    });
+}
+
+
+    Cargar_Template(TurnoId, $("#cbo_especialidad").val());
+    Cargar_Comentario(TurnoId);
+
+
+
+        
+</script>
+
+
+<div id="temp_eco_insumos" style="display:block; height:250px;">
+    Informe algún problema: <select id="cbo_problema"></select>    
+    <input type="text" id="txt_temp_eco_comentario" style="width:90%" placeholder="Comentario"/>
+    <table class="table table-condensed borderless hide">
+    <thead>
+    <tr><th>Insumo</th><th>Cantidad</th></tr>
+    </thead>
+    <tbody id="temp_tabla">    
+    </tbody>
+    </table>
+    <div>
+        <a class="btn btn-info" onclick="javascript:Guardar_Template();">Guardar</a>
+        <a class="btn btn-danger" onclick="javascript:OcultarCargaDatos();">Cancelar</a>
+        <a class="btn btn-success" onclick="javascript:CargaInsumos();">Cargar Insumos</a>      
+        <a class="btn btn-warning" onclick="javascript:MostrarParteAnestesia();">Parte Anestesia</a>        
+    </div>
+</div>
+
+
+

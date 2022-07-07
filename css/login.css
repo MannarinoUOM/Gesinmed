@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+background: #368ab5; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzNjhhYjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OSUiIHN0b3AtY29sb3I9IiMwMDYwOTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiAgPHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-radial-gradient(center, ellipse cover,  #368ab5 0%, #006092 99%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#368ab5), color-stop(99%,#006092)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #368ab5 0%,#006092 99%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #368ab5 0%,#006092 99%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #368ab5 0%,#006092 99%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #368ab5 0%,#006092 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#368ab5', endColorstr='#006092',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+
+
+.centrar1{
+text-align:center;
+}
+.centrar2{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.contenedor_login{
+	width:238px;
+	min-height:317px;
+	border-radius:10px;
+	padding-bottom:10px;
+	background-color:#f1f1f1;
+	margin-top:100px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.login_imagen{
+	text-align:center;
+	padding-top:20px;
+	margin-bottom:20px;
+}
+
+input::-webkit-input-placeholder {
+    color:    #CCC;
+}
+input:-moz-placeholder {
+    color:    #3CF;
+}
+input:-ms-input-placeholder {
+    color:    #fff;
+}
+
+.centrar1 input{
+background-color:#00669b;
+	height:28px;
+	width:200px;
+	color:#FFF;
+	font-size:15px;
+	font-weight:bold;
+	padding-left:10px;}
+
+.centrar1:hover input{
+background-color:#0083c7;
+}
+
+
+.centrar1 input:focus{
+background-color:#00a8ff;
+}
+
+.erroligin {width:70%; margin-left:10px; display:none;}
+
+
+
+/*agregado para la animacion de mostrar mensaje de olvido password*/
+#auto{
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+#auto:hover{
+	opacity: .8;
+}
+#div-mostrar
+{
+	width: 100%;
+	margin: auto;
+	height: 0px;
+	background: #000;
+	transition: height .5s, opacity .5s ease-in;
+    color:white;
+    text-align: center;
+}
+
+

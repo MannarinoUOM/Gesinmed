@@ -1,0 +1,137 @@
+﻿body {
+}
+
+.centrarImg
+{
+position:relative;
+}
+
+.centrarImg:hover
+{
+    cursor:pointer;
+    opacity: 0.2;
+  
+
+    }
+   
+   
+   .contenedorImgIzquierdo:hover .centrarAizq
+{
+
+   display:block;
+   margin:5%;
+   height:0%;
+   width:15%;
+  position:absolute;
+  top:130px;
+  left:100px;
+    }
+
+   .contenedorImgDerecho:hover .centrarAder
+{
+
+   display:block;
+   margin:5%;
+   height:0%;
+   width:15%;
+  position:absolute;
+  top:130px;
+  right:120px;
+    }
+   
+   
+.centrarAizq
+{
+display:none;
+position:relative;
+}
+
+
+.centrarAder
+{
+display:none;
+}
+
+.contenedorImgDerecho
+{
+background-color:#DCCECB; 
+float:right; 
+height:300px; 
+width:350px; 
+text-align:center; 
+margin-right:1%;
+overflow-x:no;
+}
+
+
+.contenedorImgIzquierdo
+{
+    
+background-color:#DCCECB; 
+float:left; 
+height:300px; 
+width:350px; 
+text-align:center; 
+margin-left:1%;
+overflow-x:no;
+}
+
+.contControlesDown
+{
+position:absolute; 
+display:block;  
+bottom:0.1%;
+width:90%;
+padding-left:1%;
+padding-right:1%;
+}
+
+
+        
+    .pie_gris_compras{
+	position: absolute;
+	padding: 5px;
+	/*padding-right: 2%;
+	height: 35px;*/
+	text-align: center;
+	width: 98%;
+	background-color: #CCCCCC;
+	bottom: 0;
+	margin:auto;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.pie_gris_compras table {
+       margin: 0 auto;
+       text-align: left;
+}
+
+.zoom:hover
+{
+    cursor:pointer;
+    opacity: 0.2;
+
+    }
+    
+    .lupa:hover
+{
+    cursor:pointer;
+    }
+    
+    .lupa
+    {
+position:absolute;
+top:40px;
+margin-left:10%;
+        }
+        
+.btn-circle {
+    width: 15px;
+    height: 10px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.42857;
+}

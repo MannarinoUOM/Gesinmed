@@ -1,0 +1,115 @@
+﻿.FechasInput
+{
+    width:80px;
+}
+
+.HoraInput
+{
+    width:40px;
+}
+
+#Turnos td
+{
+    cursor:pointer;
+}
+
+.Color_SobreTurno
+{
+background-color:#d9edf7;
+}
+
+.Color_Libre
+{
+background-color:#faf2cc;
+}
+
+.Color_Ocupado
+{
+background-color:#d0e9c6;
+}
+
+.Color_Cancelado
+{
+background-color:#ebcccc;
+}
+
+#Turnos table
+{
+    font-size:12px;
+}
+
+#OpcionesConfirmacion
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+      color: #;
+  background-color: #f89406;
+  *background-color: #df8505;
+}
+
+.Contenedor
+{
+padding:5px;
+}
+
+input, select, button
+{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.add-on,label
+{
+ margin-top: 5px;
+}
+
+.SinEspacios
+{
+     margin-top:0px; 
+     margin-left: 0px;
+    }
+    
+.Turnos_Libres
+{
+    background-color:#F4FA58;
+    }
+
+.Turnos_Ocupados
+{
+    background-color:#58FA58;
+    /*background-color:rgb(1, 181, 46)*/
+    /*background-color:#b1c800;*/
+}
+
+
+.Turnos_Sobreturno
+{
+   background-color:#0080FF; 
+   }
+
+.Turnos_Cancelado
+{
+   background-color:#FA5858; 
+   }
+
+
+/*MANUEL=============================================================*/
+
+.Semaforo_Amarillo
+{
+    background-color:#F4FA58;
+    }
+
+.Semaforo_Verde
+{
+    background-color:#58FA58;
+    /*background-color:rgb(1, 181, 46)*/
+    /*background-color:#b1c800;*/
+}
+
+
+.Semaforo_Rojo
+{
+   background-color:#FA5858; 
+   }

@@ -1,0 +1,141 @@
+﻿body {
+}
+
+.part_izq
+{   width:30%;
+    height:30px;
+    background-color: #D8D8D8;
+    border-radius:10px 0px 0px 10px;
+    float:left;
+    padding:0px;
+
+    /*border-style:solid;*/
+}
+
+.part_der
+{   width:30%;
+    height:30px;
+    background-color: #D8D8D8;
+    border-radius:0px 10px 10px 0px;
+    float:right;
+    margin:auto;  
+    border-color:#A4A4A4;  
+    padding:0px;
+}
+
+.part_cen
+{    
+    width:16px;
+    height:10px;
+    background-color: #D8D8D8;
+    border-radius:0px 0px 0px 0px;
+    margin:0px;
+    border:0.1px solid #CCCCCC;
+
+    /*border-style:solid;*/
+}
+
+  .diente:hover{
+    color: #9b0e0e;
+    background-color: #A4A4A4;
+    text-decoration: none;
+  }
+
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+.lineaH {
+    border-bottom: 2px solid black;
+    word-wrap: break-word;
+}
+
+.lineaV {
+    border-right: 2px solid black;
+    word-wrap: break-word;
+}
+
+#boca{
+    position: absolute;
+    left:0;  /*se oculta por la izquierda*/
+    /*right: 0;  se oculta por la derecha */
+}
+
+
+  .renglon {  text-align: center; }
+  
+  
+    .rojo:hover{
+    color: #9b0e0e;
+    background-color: #A4A4A4;
+    text-decoration: none;
+  }
+   .rojo{
+    color: #9b0e0e;
+    background-color: Red;
+    text-decoration: none;
+  }
+  
+      .azul:hover{
+    color: #9b0e0e;
+    background-color: #A4A4A4;
+    text-decoration: none;
+  }
+   .azul{
+    color: #9b0e0e;
+    background-color: Blue;
+    text-decoration: none;
+  }
+  
+  .contenedorArriba
+  {
+      border-top-right-radius:10px;
+      border-top-left-radius:10px;
+      border-bottom-right-radius:0px;
+      border-bottom-left-radius:0px;
+      border-color:#CCCCCC;
+      border-width:1px;
+      border-style:solid;
+  }
+  
+    .contenedorAbajo
+  {
+      border-top-right-radius:0px;
+      border-top-left-radius:0px;
+      border-bottom-right-radius:10px;
+      border-bottom-left-radius:10px;
+      border-color:#CCCCCC;
+      border-width:1px;
+      border-style:solid;
+  }
+  
+      .margenControl
+  {
+   margin-left:1.5%;
+   margin-top:0%;
+   margin-bottom:0%;
+  }
+  
+ /* .celdaChica{
+height: auto;
+  max-width: 10px;
+    word-wrap: break-word;
+
+}
+
+  .celdaMediana{
+height: auto;
+    max-width: 100px;
+    word-wrap: break-word;
+}
+
+  .celdaGrande{
+height: auto;
+    max-width: 200px;
+    word-wrap: break-word;
+}*/
+  .seleccionCara{
+background-color: #A9F5F2;
+}
+

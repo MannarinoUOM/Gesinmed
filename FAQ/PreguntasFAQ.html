@@ -1,0 +1,809 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="../css/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" />
+<link href="../css/barra.css" rel="stylesheet" type="text/css" />
+<script type='text/javascript'>
+//<![CDATA[
+  var nW,nH,oH,oW;
+  function zoomToggle(iWideSmall,iHighSmall,iWideLarge,iHighLarge,whichImage){
+    oW=whichImage.style.width;oH=whichImage.style.height;
+    if((oW==iWideLarge)||(oH==iHighLarge)){
+      nW=iWideSmall;nH=iHighSmall;
+    }else{
+      nW=iWideLarge;nH=iHighLarge;
+    }
+    whichImage.style.width=nW;whichImage.style.height=nH;
+  }
+//]]>
+
+</script>
+<script src="../js/jquery-1.8.3.js" type="text/javascript"></script>
+<script src="../js/bootstrap.js" type="text/javascript"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+    <form id="form1" runat="server">
+    <div id="nov" class="DivNovedades2" style="overflow:auto; height:600px; "> 
+    
+    <div class="panel-group" id="accordion">
+  <div class="panel panel-default" id="1">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          >  ¿C&oacute;mo cancelar un turno?      
+              </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+      
+            <strong><U>PASOS</U></strong><br /><br />
+        <strong>1.</strong>	Hacer clic sobre la opci&oacute;n <strong>"Turnos" </strong>; y luego dentro del men&uacute; desplegable elegir <strong>"Cancelar Turnos" </strong>;.
+          <br /><br />
+          
+           <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Cancelar turnos/1.1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','450px','375px',this);" /><br /><br />
+            
+          <br /><br />
+          <strong>2.</strong>	Completar los siguientes campos seg&uacute;n la informaci&oacute;n del turno a cancelar:
+  <br />
+  <br />
+  &#8226;<u>Especialidad</u>
+          : seleccionar la especialidad del turno otorgado<br />
+        &#8226;<u>M&eacute;dico</u>
+          : seleccionar al m&eacute;dico  al cual se le asign&oacute; el turno.<br />
+          &#8226;<u>Fecha Inicio:</u> ingresar la fecha del turno.<br />
+         &#8226;<u>Ficha Fin:</u>ingresar la fecha posterior al turno. Para cancelar turnos de los días siguientes extender esta la fecha.<br />
+          &#8226;<u>Hora Desde / Hora Hasta (Optativo):</u> ingresar los horarios que comprenden los turnos a eliminar.
+          <br />
+          &#8226;Bot&oacute;n &ldquo;Mostrar Libres&rdquo; al activarlo se visualizaran tambi&eacute;n los turnos libres.
+          <br /><br />
+          <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Cancelar turnos/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','450px','275px',this);" /><br /><br />
+          <br /><br />
+         <strong> 3.</strong>	Hacer  clic en el bot&oacute;n <strong>"Buscar" </strong>;.
+          <br /><br />
+          <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Cancelar turnos/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','450px','275px',this);" /><br /><br />
+                   
+         <strong> 4.</strong>	De la lista de turnos tomados seleccionar el que vamos a eliminar haciendo clic sobre el mismo
+           <br /><br />
+           <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Cancelar turnos/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','720px','375px',this);" /><br /><br />
+                   <strong> 5.</strong>	Seleccionar el motivo de la cancelaci&oacute;n:<br /><br />
+           &#8226 <u>Entidad:</u> al cancelar el turno con esta opci&oacute;n, &eacute;ste se va poder reutilizar con otro paciente.<br />
+          &#8226 <u>M&eacutedico:</u> al cancelar el turno con esta opci&oacute;n, &eacute;ste se va poder reutilizar con otro paciente.<br />
+          &#8226 <u>Paciente:</u> al cancelar el turno con esta opci&oacute;n, &eacute;ste puede reutilizarse con otro paciente.<br /><br />
+          <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Cancelar turnos/4.0.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','345px',this);" /><br /><br />
+                   Una vez cancelado, el turno desaparece de la lista.<br /><br />
+                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+         >  ¿Cómo utilizar el pedido de turno express?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+      <strong><U>PASOS</U></strong><br /><br />
+        <strong>1.</strong>	Hacer  clic sobre la opci&oacute;n <strong>"Turnos" </strong>; y luego dentro del men&uacute; desplegable elegir <strong>"Pedidos de Turnos(EXPRESS)"</strong>;. <br /><br />
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Turnos Express/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','450px','375px',this);" /><br /><br />
+        
+        <strong>2.</strong>Para ver la agenda de un médico en particular debemos elegir la especialidad y el médico de la listas desplegables.<br />
+        Para ver todos los turnos de una especialidad solo elegimos la especialidad.<br /><br />
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Turnos Express/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','720px','375px',this);" /><br /><br />
+         
+        <strong> 3.</strong> Seleccionar un turno de la lista haciendo clic sobre el mismo para asignárselo a un paciente.<br />
+        Para ver los turnos de una fecha en particular, ingresar ésta donde se indica en la siguiente imagen.<br /><br />
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Turnos Express/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','275px',this);" /><br /><br />
+        
+        <strong>4.</strong>Ingresar DNI o NHC del paciente seguido de la tecla TAB o hacer clic sobre la pantalla.<br />
+        Si el paciente se encuentra en el padrón se autocompletaran los campos restante con los datos del paciente.<br />
+          <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Turnos Express/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','400px','375px',this);" /><br /><br />
+       
+      Otra opción es ingresar el apellido y nombre del paciente, luego hacer clic sobre la lupa. Proseguir eligiendo de la lista el paciente correcto.<br /> 
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Turnos Express/5.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','400px','375px',this);" /><br /><br />
+        
+     <strong>5.</strong>Hacer  clic en el  botón <strong>"Confirmar  Turno"</strong>.<br /><br />
+    <strong> 6.</strong>Hacer  clic en el botón<strong> "Confirmar"</strong>.<br />
+    Se puede ingresar una observación en el turno, esta saldrá en el comprobante del turno.<br /><br />
+    <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Turnos Express/7.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+      <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+        
+         </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+        >  ¿Cómo generar la agenda del médico?
+         </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+      La agenda del médico son los turnos libres y tomados que posee el médico.<br />
+      Generar la agenda consiste en crear turnos libres para que puedan ser tomados por pacientes.<br /><br />
+      
+      <strong><U>PASOS</U></strong><br /><br />
+      <strong>1.</strong> Hacer clic sobre la opci&oacute;n<strong>"Turnos"</strong> y luego dentro del men&uacute; desplegable elegir <strong>"médicos"</strong>.<br /><br />
+       <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Agenda Medico/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','470px','350px',this);" /><br /><br />
+      
+      <strong>2.</strong>Usar para buscar al médico alguno de los siguientes criterios que se detallan a continuación  y hacer clic en el botón <strong>"Buscar"</strong>.<br /><br />
+<u>Especialidad:</u> Tildar la especialidad correspondiente<br />
+<u>Apellido y Nombre</u> <br />
+<u>Matrícula Provincial</u> <br />
+<u>Matrícula Nacional</u> <br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Agenda Medico/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','400px',this);" /><br /><br />
+De la lista de médicos seleccionar el correcto haciendo clic sobre el mismo.<br /><br />
+<strong>3.</strong> Ir a días de atención del médico para determinar los días y horarios laborales.<br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Agenda Medico/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+<strong>4.</strong>Seleccionar la especialidad, un día de atención y consultorio. Luego ingresar completar los siguientes campos:<br /><br />
+<u>duración del turno:</u> ingresar en minutos la duración de un turno promedio.<br />
+<u>hora de inicio:</u> ingresar el horario del primer turno. <br />
+<u>hora fin:</u> ingresar el horario del último turno. <br /> <br /> 
+Por último hacer clic en el botón <strong>"Agregar"</strong>. Repetir este paso por cada día y especialidad del médico.<br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Agenda Medico/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','750px','375px',this);" /><br /><br />
+<strong>5.</strong>Hacer clic sobre la opci&oacute;n "Turnos"; y luego dentro del men&uacute; desplegable elegir "Generación de Turnos". <br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Agenda Medico/5.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','400px','375px',this);" /><br /><br />
+
+<strong>6.</strong>En la sección "1-Datos del médico" seleccionar la especialidad y al médico de la listas.<br />
+Dentro de esta sección están los botones:<br /><br />
+
+<u>Rango de días a generar:</u> genera turnos según los horarios que se cargaron en los puntos anteriores dentro del rango de fecha especificado.<br />
+<u>Día y horario específico:</u> genera turnos en un día determinado según los horarios e intervalos indicados en este módulo.<br /><br />
+<strong>7.</strong> <strong>Modo  "Rangos  de días generar"</strong>.<br />
+En la sección "Rangos de días a generar" completar los campos:<br /><br />
+<u>Fecha desde:</u> ingresar la fecha a partir de donde se generan los turno.<br />
+<u>Fecha Hasta:</u> ingresar la fecha hasta donde se generan los turnos. <br /><br/><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Agenda Medico/6.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+
+<strong>Modo "día y horario específico"</strong><br />
+En la sección "Día y horario específico" completar los campos:<br /><br />
+<u>Fecha:</u> ingresar la fecha sobre los cuales se generarán los turnos.<br />
+<u>duración del turno:</u>indicar los espacios de tiempo entre turnos.<br />
+<u>Hora inicio:</u> ingresar la hora del primer turno.<br />
+<u>Hora fin:</u> ingresar la hora del último turno.<br />
+<u>Consultorio:</u> ingresar el consultorio donde se atenderán los pacientes.<br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Agenda Medico/7.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+
+<strong>8.</strong> Hacer clic en el botón <strong>"Generar Turnos"</strong>. Si la operación fue exitosa un mensaje nos dirá cuántos turnos se crearon en la agenda del médico.<br /><br />
+  <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+         >  ¿Cómo reimprimir el comprobante de un turno?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+        <strong>1.</strong> Hacer clic sobre la opci&oacute;n <strong>"Turnos" </strong>; y luego dentro del men&uacute; desplegable elegir <strong> "Pedido de Turnos" </strong>;.<br /><br />
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Reimprimir turnos/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','400px','355px',this);" /><br /><br />
+        
+        <strong>2.</strong>Ingresar DNI o NHC del paciente seguido de la tecla TAB o hacer clic sobre la pantalla.<br />
+        Si el paciente se encuentra en el padrón se autocompletaran los campos restante con los datos del paciente.<br />
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Turnos Express/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','400px','375px',this);" /><br /><br />
+        
+      También se puede ingresar el apellido-nombre del paciente y luego hacer clic sobre la lupa. Proseguir eligiendo de la lista de pacientes el correcto.<br /> 
+      <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Turnos Express/5.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','400px','375px',this);" /><img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Turnos Express/6.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+        
+        <strong>3.</strong>Hacer clic en el botón <strong>"Turnos otorgados"</strong> y seleccionar el turno a reimprimir.<br /><br />
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Reimprimir turnos/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','760px','350px',this);" />
+        
+        <br /><br />
+        Al seleccionar el turno se abrirá una ventana con el comprobante, donde se puede imprimir o guardar el documento.<br /><br />
+         <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Reimprimir turnos/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+        
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+         </div>
+    </div>
+  </div>
+
+    
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+        >  ¿Cómo eliminar turnos generados?
+        
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+       Eliminar turnos consiste en quitar los turnos de la agenda del médico para que no puedan ser utilizados a futuro.<br /><br />
+      
+      <strong><U>PASOS</U></strong><br /><br />
+        <strong>1.</strong> Hacer clic sobre la opci&oacute;n <strong>"Turnos"</strong>; y luego dentro del men&uacute; desplegable elegir <strong>"Eliminar Turnos"</strong>;.<br /><br />
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Eliminar Turnos/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','450px','345px',this);" /><br /><br />
+        
+        <strong>2.</strong>Completar los siguientes campos con los datos de los turnos a eliminar.
+        <br /><br />
+       <u>Especialidad:</u>elegir la especialidad<br />
+       <u>médico:</u>elegir al médico<br />
+       <u>Turnos:</u>existen dos opciones. La opción <strong>"Libres"</strong> elimina aquellos turnos que no fueron otorgados a pacientes. La opción <strong>"Todos"</strong>, se eliminan los turnos libres y cancela los turnos tomados, es decir quedan inhabilitados para ser otorgados a pacientes.<br />
+       <u>Fecha Inicio/Fecha Fin:</u> Los turnos que están dentro de estas fechas ingresadas serán afectados.
+        <u>(optativo) Hora Desde/Hora Hasta:</u> Los turnos que están dentro de este horario de los días indicados anteriormente serán afectados. Si no se indican los horarios se afectaran todos los turnos del día.<br /><br />
+         <strong>3.</strong>Hacer clic en el botón <strong>"Quitar Turnos"</strong>.<br /><br />
+          <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Eliminar Turnos/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','450px','345px',this);" />
+        
+        <br /><br />
+        Si los turnos se quitaron con éxito el sistema emitirá un mensaje.<br /><br />
+         <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+        </div>
+    </div>
+  </div>
+
+     <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapsesix">
+        >  ¿Cómo informar que un médico se ausenta un determinado tiempo?  
+        </a>
+      </h4>
+    </div>
+    <div id="collapsesix" class="panel-collapse collapse">
+      <div class="panel-body">
+     Al informar la ausencia de un médico, cuando se genere la agenda de éste no se crearon turnos para las fechas de ausencia. De esta forma no se podrán tomar turnos para las fechas que el médico esté ausente.<br /><br />
+      
+      <strong><U>PASOS</U></strong><br /><br />
+        <strong>1.</strong> Hacer clic sobre la opci&oacute;n <strong>"Turnos" </strong>; y luego dentro del men&uacute; desplegable elegir <strong>"médicos"</strong>;.<br /><br />
+         <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Medico Ausente/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','450px','335px',this);" /><br /><br />
+       
+        <strong>2.</strong>Usar para buscar al médico alguno de los siguientes criterios que se detallan a continuación  y hacer clic en el botón <strong>"Buscar"</strong>. De la lista de médicos seleccionar el correcto haciendo clic sobre el mismo.<br /><br />
+Especialidad: Tildar la especialidad correspondiente<br />
+Apellido y Nombre <br />
+Matrícula Provincial <br />
+Matrícula Nacional <br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Agenda Medico/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+
+       	<strong>3.</strong>Hacer clic en el botón <strong>"día de no atención"</strong>.<br /><br />
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Medico Ausente/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+
+<strong>4.</strong>En la pantalla día de no atención, se debe ingresar:<br /><br />
+<u>Especialidad:</u> seleccionar la especialidad que el médico se va ausentar. <br />
+<u>Fecha Desde/Fecha Hasta:</u> ingresar entre que fechas el médico se va ausentar para la especialidad indicada anteriormente.<br />
+<u>(optativo)Motivo de ausencia:</u> se puede dejar una breve reseña del motivo por el cual se ausenta.<br /><br />
+<strong>5.</strong>Hacer clic en el botón <strong>"Agregar"</strong>, realizado esto nos aparecerá una ventana emergente con el mensaje Guardado. Si el médico se va ausentar en todas sus especialidades repetir el procedimiento anterior con el mismo rango de fechas.<br />
+Para eliminar, seleccionar el rango de fechas a eliminar de la lista de días de no atención y hacer clic en el botón <strong>"Eliminar"</strong>.<br />
+Para modificar, seleccionar el rango de fechas a modificar y realizar la modificación. Para que se produzcan los cambios, hacer clic en el botón <strong>"Modificar".</strong><br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Medico Ausente/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','620px','300px',this);" /><br /><br />
+
+<strong>6.</strong> Para finalizar cerrar la ventana y hacer clic en el botón <strong>"Guardar Cambios"</strong>.<br /><br />
+  <a data-toggle="collapse" data-parent="#accordion" href="#collapsesix">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+        </div>
+    </div>
+  </div>
+
+    
+     <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseseven">
+         >  ¿Cómo rendir la caja diaria?  
+        </a>
+      </h4>
+    </div>
+    <div id="collapseseven" class="panel-collapse collapse">
+      <div class="panel-body">
+     El informe rendición de la caja diaria, se verán todos los bonos emitidos en el día y el monto total de lo vendido. <br /><br />
+      
+      <strong><U>PASOS</U></strong><br /><br />
+     <strong>1.</strong> Hacer clic sobre la opci&oacute;n <strong>"Bonos" </strong>; y luego dentro del men&uacute; desplegable elegir <strong>"rendición de Bonos"</strong>;.<br /><br />
+     <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Rendicion Bonos/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','450px','325px',this);" /><br /><br />
+        
+        <strong>2.</strong>En la pantalla "Datos de Búsqueda" debemos completar los campos que se indican a continuación.<br /><br />
+<u>Fecha:</u> el informe se hará sobre la fecha ingresada. <br />
+<u>Usuarios:</u> seleccionar la caja según el usuario que emitió los bonos.<br />
+<u>Tipo:</u> elegir la opción "Bono Afiliado".<br /><br />
+Luego hacer clic en el botón <strong>"Buscar"</strong>.<br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Rendicion Bonos/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','450px','325px',this);" /><img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Rendicion Bonos/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','720px','375px',this);" /><br /><br />
+
+El informe se puede imprimir o guardar haciendo clic en sus respectivos botones.<br /><br />
+  <a data-toggle="collapse" data-parent="#accordion" href="#collapseseven">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+        </div>
+    </div>
+  </div>
+    
+     <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapsenine">
+        >  ¿Cómo rendir reintegros?  
+        </a>
+      </h4>
+    </div>
+    <div id="collapsenine" class="panel-collapse collapse">
+      <div class="panel-body">
+           <strong><U>PASOS</U></strong><br /><br />
+     <strong>1.</strong> Hacer clic sobre la opci&oacute;n <strong>"Bonos" </strong>; y luego dentro del men&uacute; desplegable elegir <strong>"rendición de Bonos"</strong>;.<br /><br />
+     <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Rendicion Bonos/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','450px','325px',this);" /><br /><br />
+        
+        <strong>2.</strong>En la pantalla "Datos de Búsqueda" debemos completar los campos que se indican a continuación.<br /><br />
+<u>Fecha:</u> el informe se hará sobre la fecha ingresada. <br />
+<u>Usuarios:</u> seleccionar la caja según el usuario que emitió los bonos. <br />
+<u>Tipo:</u> elegir la opción "Bono por Reintegro". <br /><br />
+Luego hacer clic en el botón <strong>"Buscar"</strong>.<br /><br />
+     <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Bono Reintegro/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','450px','325px',this);" /><img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Bono Reintegro/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','720px','375px',this);" /><br /><br />
+El informe se puede imprimir o guardar haciendo clic en sus respectivos botones.<br /><br />
+  <a data-toggle="collapse" data-parent="#accordion" href="#collapsenine">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+        </div>
+    </div>
+  </div>
+
+     <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseeigth">
+         >  ¿Por qué un médico no aparece a la hora de dar un turno?  
+        </a>
+      </h4>
+    </div>
+    <div id="collapseeigth" class="panel-collapse collapse">
+      <div class="panel-body">
+   Cuando un médico no aparece a la hora de dar un turno puede ser porque no esté habilitado en el sistema para esta operación o fue dado de baja. <br /><br />
+      
+      <strong><U>PASOS</U></strong><br /><br />
+    <strong>1.</strong> Hacer clic sobre la opci&oacute;n<strong>"Turnos"</strong> y luego dentro del men&uacute; desplegable elegir <strong>"médicos"</strong>.<br /><br />
+    <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Agenda Medico/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','500px','325px',this);" /><br /><br />
+      
+      <strong>2.</strong>Usar para buscar al médico alguno de los siguientes criterios que se detallan a continuación  y hacer clic en el botón <strong>"Buscar"</strong>.<br /><br />
+Especialidad: Tildar la especialidad correspondiente<br />
+Apellido y Nombre <br />
+Matrícula Provincial <br />
+Matrícula Nacional <br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Agenda Medico/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+
+De la lista de médicos seleccionar el correcto haciendo clic sobre el mismo.<br /><br />
+<strong>3.</strong> En la ventana emergente donde se encuentran los datos del médico controlar que el botón <strong>"Mostrar en Turnos"</strong> se encuentre activado.<br />
+<img src="Imagenes/Medico Turno/2.png" width="120" height="120" title="desactivado" /><img src="Imagenes/Medico Turno/3.png" width="120" height="120" title="activado" /><br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Medico Turno/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+
+<strong>4.</strong> Ir a la pestaña <strong>"Baja"</strong> y controlar que tenga una fecha de baja. De tenerlo borrar la fecha y dejar el campo vacío.<br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Medico Turno/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+
+<strong>5.</strong> Por último hacer clic en <strong>"Guardar cambios"</strong>. El médico debería encontrarse disponible en turnos.<br /><br />
+
+  <a data-toggle="collapse" data-parent="#accordion" href="#collapseeigth">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+        </div>
+    </div>
+  </div>
+    
+       <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseten">
+         >  ¿Cómo rendir los bonos emetidos para un determinado médico?  
+        </a>
+      </h4>
+    </div>
+    <div id="collapseten" class="panel-collapse collapse">
+      <div class="panel-body">
+        <strong><U>PASOS</U></strong><br /><br />
+    <strong>1.</strong> Hacer clic sobre la opci&oacute;n<strong>"Bonos"</strong> y luego dentro del men&uacute; desplegable elegir <strong>"Rendición de Bonos por médico"</strong>.<br /><br />
+    <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Rendicion Medico/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','400px','325px',this);" /><br /><br />
+      
+           <strong>2.</strong>En la pantalla "Datos de Búsqueda" debemos completar los campos que se indican a continuación.<br /><br />
+<u>Fecha:</u> el informe se hará sobre la fecha ingresada. <br />
+<u>Usuarios:</u> seleccionar el usuario que emitió los bonos. Con la opción "Todos" visualizaremos todos los bonos. <br />
+<u>médico:</u> seleccionar al médico para el informe.  <br />
+<u>Tipo:</u> elegir la opción "Bono por Afiliado". <br /><br />
+Luego hacer clic en el botón <strong>"Buscar"</strong><br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/rendicion medico/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','425px','325px',this);" /><img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/rendicion medico/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','720px','375px',this);" /><br /><br />
+
+El informe se puede imprimir o guardar haciendo clic en sus respectivos botones.<br /><br />
+  <a data-toggle="collapse" data-parent="#accordion" href="#collapseten">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+    </div>
+    </div>
+  </div>
+
+ <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapeleven">
+         >  ¿Por qué no le aparecen al médico algunos pacientes del día?  
+        </a>
+      </h4>
+    </div>
+    <div id="collapeleven" class="panel-collapse collapse">
+      <div class="panel-body">
+      El motivo por el cual el paciente no es que aún no ha sido recepcionado.<br /><br />
+        <strong><U>PASOS</U></strong><br /><br />
+    <strong>1.</strong> Hacer clic sobre la opci&oacute;n<strong>"At. Consultorio"</strong> y luego dentro del men&uacute; desplegable elegir <strong>"Recepción de Pacientes"</strong>.<br /><br />
+    <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Paciente Dia/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','560px','325px',this);" /><br /><br />
+     
+           <strong>2.</strong>En la pantalla datos del turno, ingresar el número de bono. Si se desconoce el número de bono lo puede buscar en "Bonos>Buscar Bonos" o ingresar el DNI del paciente.<br /><br />
+               <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Paciente Dia/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','350px','325px',this);" /><br /><br />
+            
+              <strong>3.</strong> Seleccionar el turno del paciente haciendo clic sobre éste.<br /><br />
+              <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Paciente Dia/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+             
+              En el caso que se halla ingresado el <strong>DNI</strong> o <strong>NHC</strong> del paciente para la recepción, tendremos que seleccionar el bono para este turno</strong>.<br /><br />
+              <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Paciente Dia/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+            
+              Una vez recepcionado el paciente al médico le aparecerá en la lista para atender.<br /><br />
+  <a data-toggle="collapse" data-parent="#accordion" href="#collapeleven">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+        </div>
+    </div>
+  </div>
+    
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collaptwelve">
+         >  ¿Cómo dar de alta a un médico? 
+        </a>
+      </h4>
+    </div>
+    <div id="collaptwelve" class="panel-collapse collapse">
+      <div class="panel-body">
+     <br /><br />
+        <strong><U>PASOS</U></strong><br /><br />
+    <strong>1.</strong> Hacer clic sobre la opci&oacute;n<strong>"Turnos"</strong> y luego dentro del men&uacute; desplegable elegir <strong>"Médicos"</strong>.<br /><br />
+    <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/alta medico/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','450px','325px',this);" /><br /><br />
+      
+           <strong>2.</strong>Hacer clic en el botón "+Nuevo".<br /><br />
+             <strong>3.</strong> Completar la pestaña "Datos Principales" con información básica del médico.<br />
+              Los siguientes botones al activarse cumplen las siguientes funciones: <br /><br />
+             <u> "Aplica Rendición"</u> <br />
+            <u>  "Rinde Honorarios":</u> a modo informativo indica que el médico rinde honorarios. <br />
+             <u> "Mostrar en Turnos":</u> permite que se generen y tomen turnos de este médico. <br /> <br />
+             <strong>4.</strong> Completar la pestaña "Domicilio y Contacto" con los datos del médico.<br /><br /><h2><h3></h3></h2>
+              <strong>5.</strong> En la pestaña "Especialidad" seleccionar de la lista desplegable la correcta. Dependiendo donde se practique la especialidad se deben activar los botones "Guardia", "Quirófano", "Ambulatorio", "Internación". Por ultimo ingresar las matrículas y hacer clic en "Agregar".<br />
+              Para quitar la especialidad de la lista, hacer clic sobre la misma y luego en el botón "Quitar" (botón cruz). <br />
+              Para modificar la especialidad, hacer clic sobre la misma, realizar la modificación y por ultimo hacer clic en el botón "Modificar".<br /><br />
+              <strong>6.</strong> (Optativo) Si se desea agregar una observación de este médico ingresar el comentario en la pestaña "Observaciones".<br /><br />
+              <strong>7.</strong> Para concretar el alta del médico hacer clic en el botón "Guardar Cambios".<br /><br />
+                  <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/alta medico/5.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','600px','375px',this);" /><br /><br />
+                  <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/alta medico/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','600px','375px',this);" /><br /><br />
+                <a data-toggle="collapse" data-parent="#accordion" href="#collaptwelve">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+                      </div>
+    </div>
+  </div>
+
+    
+     <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapthirteen">
+         >  ¿Cómo emitir un bono de guardia?
+        </a>
+      </h4>
+    </div>
+    <div id="collapthirteen" class="panel-collapse collapse">
+      <div class="panel-body">
+     <br /><br />
+        <strong><U>PASOS</U></strong><br /><br />
+    <strong>1.</strong> Hacer clic sobre la opci&oacute;n<strong>"Bonos"</strong> y luego dentro del men&uacute; desplegable elegir <strong>"Nuevo Bono"</strong>.<br /><br />
+    <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono guardia/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','500px','325px',this);" /><br /><br />
+               <strong>2.</strong>Ingresar DNI o NHC del paciente seguido de la tecla TAB o hacer clic sobre la pantalla.<br />
+        Si el paciente se encuentra en el padrón se autocompletaran los campos restante con los datos del paciente.<br /><br />
+         <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono guardia/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','350px','325px',this);" /><br /><br />
+        
+        Otra opción es ingresar el paciente apellido y nombre del paciente, luego hacer clic sobre la lupa. Proseguir eligiendo de la lista el paciente correcto.<br /> <br /> 
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono guardia/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','350px','325px',this);" /><img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono guardia/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','700px','375px',this);" /><br /><br />
+        
+             <strong>3.</strong> Seleccionar <strong>Guardia</strong> de la lista "Especialidades". Luego seleccionar de la lista "Médicos" al que corresponda.<br /><br />
+             <strong>4.</strong> Seleccionar la práctica ya sea ingresando el código seguido de la tecla TAB o seleccionar la misma en la lista de prácticas. Si la práctica está valorizada el valor del bono se cargará automáticamente sino ingresar manualmente. <br />
+             Por último hacer clic en el botón "Agregar".<br /><br />
+             <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono guardia/5.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+             
+              Para editar una práctica de la lista hacer clic en el botón "Editar Práctica".<br />
+              Para eliminar una práctica de la lista hacer clic en el botón "Quitar Práctica".<br /><br />
+              <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono guardia/6.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','720px','235px',this);" /><br /><br />
+               
+              <strong>5.</strong> Por último hacer clic en el botón "Confirmar".<br />
+              Se visualizará el bono en una nueva ventana donde se lo puede imprimir o guardar.<br /><br />
+               <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono guardia/7.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','720px','375px',this);" /><br /><br />
+           
+              
+              
+    <a data-toggle="collapse" data-parent="#accordion" href="#collapthirteen">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+
+
+        </div>
+    </div>
+  </div>
+
+     <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapfourteen">
+         >  ¿Cómo llamar a un paciente por la turnera?
+             
+        </a>
+      </h4>
+    </div>
+    <div id="collapfourteen" class="panel-collapse collapse">
+      <div class="panel-body">
+     <br /><br />
+     Para poder llamar el paciente, éste tiene que estar recepcionado.<br /><br />
+        <strong><U>PASOS</U></strong><br /><br />
+    <strong>1.</strong> Hacer clic sobre la opci&oacute;n<strong>"At. Consultorio"</strong> y luego dentro del men&uacute; desplegable elegir <strong>"Pacientes del día"</strong>.<br /><br />
+      <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/llamar paciente/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','425px','290px',this);" /><br /><br />
+      
+         <strong>2.</strong>Seleccionar al médico y la especialidad.<br /><br />
+         <strong>3.</strong> Seleccionar de la lista de pacientes al que vamos a llamar por la turnera haciendo clic sobre el mismo. Aparecerá una nueva ventana con datos del paciente y varias opciones<br /><br />
+         <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/llamar paciente/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+          
+             <strong>4.</strong> Seleccionar la opción "1. Llamar Paciente". Una vez llamado el nombre y apellido del paciente aparecerá en la turnera, también se habilitarán nuevas opciones.<br /><br />		
+             <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/llamar paciente/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+          
+              
+            
+              
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapfourteen">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+  
+
+
+        </div>
+    </div>
+  </div>
+   
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapsixteen">
+         >  ¿Cómo emitir un bono contribución para medicamentos?
+             
+        </a>
+      </h4>
+    </div>
+    <div id="collapsixteen" class="panel-collapse collapse">
+<div class="panel-body">
+<br /><br />
+<strong><U>PASOS</U></strong><br /><br />
+<strong>1.</strong> Hacer clic sobre la opci&oacute;n<strong>"Farmacia"</strong> y luego dentro del men&uacute; desplegable elegir <strong>"Bono Contribución"</strong>.<br /><br />
+ <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono contribucion/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','475px','400px',this);" /><br /><br />
+
+<strong>2.</strong>Ingresar DNI o NHC del afiliado seguido de la tecla TAB o hacer clic sobre la pantalla.<br />
+        Si el paciente se encuentra en el padrón se autocompletaran los campos restante con los datos del paciente.<br />
+        Otra opción es ingresar el paciente apellido y nombre del paciente, luego hacer clic sobre la lupa. Proseguir eligiendo de la lista el paciente correcto. Luego hacer clic en el botón "Siguiente"<br /> <br /> 
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono contribucion/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','375px','335px',this);" /><br /><br />
+       
+<strong>3.</strong>Seleccionar el medicamento de la lista e ingresar manualmente la cantidad y el precio de este. Luego hacer clic en botón "Agregar" para ingresarlo a la lista de medicamentos.<br />
+         Para editar un medicamento de la lista hacer clic en el botón "Editar Medicamento".<br />
+         Para eliminar un medicamento de la lista hacer clic en el botón "Quitar Medicamento".<br /><br />
+         <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono contribucion/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+       
+       <strong>4.</strong> Hacer clic en el botón "Confirmar". En una nueva ventana aparecerá el bono donde se lo puede imprimir o guardar.<br /><br />
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono contribucion/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','725px','375px',this);" /><br /><br />
+         <a data-toggle="collapse" data-parent="#accordion" href="#collapsixteen">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+       </div>
+    </div>
+  </div>
+      
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseventeen">
+         >  ¿Cómo emitir un bono general para una determinada especialidad?
+             
+        </a>
+      </h4>
+    </div>
+    <div id="collapseventeen" class="panel-collapse collapse">
+<div class="panel-body">
+<br /><br />Un bono general de alguna especialidad puede ser utilizado con cualquier médico de dicha especialidad.
+<br /><br />
+ <strong><U>PASOS</U></strong><br /><br />
+    <strong>1.</strong> Hacer clic sobre la opci&oacute;n<strong>"Bonos"</strong> y luego dentro del men&uacute; desplegable elegir <strong>"Nuevo Bono"</strong>.<br /><br />
+    <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono guardia/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','500px','335px',this);" /><br /><br />
+      
+         <strong>2.</strong>Ingresar DNI o NHC del paciente seguido de la tecla TAB o hacer clic sobre la pantalla.<br />
+        Si el paciente se encuentra en el padrón se autocompletaran los campos restante con los datos del paciente.<br /><br />
+            <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono guardia/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','370px','335px',this);" /><br /><br />
+     
+        Otra opción es ingresar el paciente apellido y nombre del paciente, luego hacer clic sobre la lupa. Proseguir eligiendo de la lista el paciente correcto.<br /> <br /> 
+        <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono guardia/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','370px','335px',this);" /><img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono guardia/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','300px',this);" /><br /><br />
+        
+             <strong>3.</strong> Seleccionar la especialidad del <strong>bono general</strong>de la lista "Especialidades". Luego seleccionar de la lista "Médicos" la opción "General".<br /><br />
+             <strong>4.</strong> Seleccionar la práctica ya sea ingresando el código seguido de la tecla TAB o seleccionar la misma en la lista de prácticas. Si la práctica está valorizada el valor del bono se cargará automáticamente sino ingresar manualmente. <br />
+             Por último hacer clic en el botón "Agregar".<br /><br />
+             <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono general/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+                            Para editar una práctica de la lista hacer clic en el botón "Editar Práctica".<br />
+              Para eliminar una práctica de la lista hacer clic en el botón "Quitar Práctica".<br /><br />
+              <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono guardia/6.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','200px',this);" /><br /><br />
+                             <strong>5.</strong> Por último hacer clic en el botón "Confirmar".<br />
+              Se visualizará el bono en una nueva ventana donde se lo puede imprimir o guardar.<br /><br />
+              <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono general/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseventeen">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>   
+        </div>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseighteen">
+         >  ¿Cómo recepcionar un paciente que tiene un bono general para una determinada especialidad?
+             
+        </a>
+      </h4>
+    </div>
+  
+  <div id="collapseighteen" class="panel-collapse collapse">
+<div class="panel-body">
+<br /><br />
+Para poder utilizar el bono general el paciente debe poseer un turno con algún médico de la especialidad del bono general.<br /><br /> 
+        <strong><U>PASOS</U></strong><br /><br />
+    <strong>1.</strong> Hacer clic sobre la opci&oacute;n<strong>"At. Consultorio"</strong> y luego dentro del men&uacute; desplegable elegir <strong>"Recepción de Pacientes"</strong>.<br /><br />
+    <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Paciente Dia/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','550px','300px',this);" /><br /><br />
+      
+           <strong>2.</strong>Ingresar el DNI del paciente.<br /><br />
+            <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono general/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','400px','325px',this);" /><br /><br />
+                  
+              <strong>3.</strong> Seleccionar el turno del paciente haciendo clic sobre éste.<br /><br />
+              <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono general/4.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','650px','375px',this);" /><br /><br />
+
+              En el caso que se halla ingresado el <strong>DNI</strong> o <strong>NHC</strong> del paciente para la recepción, tendremos que seleccionar el bono que vamos a utilizar para este turno</strong>.<br /><br />
+              <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/bono general/5.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','700px','375px',this);" /><br /><br />
+                         
+             Una confirmación nos indicará que el bono fue recepcionado correctamente.<br /><br />
+  <a data-toggle="collapse" data-parent="#accordion" href="#collapseighteen">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+        </div>
+    </div>
+  </div>
+  
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapsnineteen">
+         >  ¿Cómo rendir bonos por cobranza a cuenta de terceros?  
+        </a>
+      </h4>
+    </div>
+    <div id="collapsnineteen" class="panel-collapse collapse">
+      <div class="panel-body">
+           <strong><U>PASOS</U></strong><br /><br />
+     <strong>1.</strong> Hacer clic sobre la opci&oacute;n <strong>"Bonos" </strong>; y luego dentro del men&uacute; desplegable elegir <strong>"rendición de Bonos"</strong>;.<br /><br />
+     <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Rendicion Bonos/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','400px','325px',this);" /><br /><br />
+        
+        <strong>2.</strong>En la pantalla <strong>"Datos de Búsqueda"</strong> debemos completar los campos que se indican a continuación.<br /><br />
+<u>Fecha:</u> el informe se hará sobre la fecha ingresada. <br />
+<u>Usuarios:</u> seleccionar la caja según el usuario que emitió los bonos. <br />
+<u>Tipo:</u> elegir la opción "Bono por Cobranza a Cta. Terceros". <br /><br />
+Luego hacer clic en el botón <strong>"Buscar"</strong>.<br /><br />
+     <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Bono por cobranza a terceros/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','430px','325px',this);" /><br /><br />El informe se puede imprimir o guardar haciendo clic en sus respectivos botones.<br /><img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Bono por cobranza a terceros/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','700px','375px',this);" /><br />
+<br />
+  <a data-toggle="collapse" data-parent="#accordion" href="#collapsnineteen">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+        </div>
+    </div>
+  </div>
+  
+    
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapfifteen">
+         >  ¿Cómo cargar la historia clínica del paciente?
+             
+        </a>
+      </h4>
+    </div>
+    <div id="collapfifteen" class="panel-collapse collapse">
+<div class="panel-body">
+Una vez llamado al paciente por la turnera se debe continuar con los siguientes pasos.
+<br /><br />
+<strong><U>PASOS</U></strong><br /><br />
+<strong>1.</strong> Seleccionar la opción <strong>"2. Carga de atención"</strong>.<br /><br />
+ <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Historia clinica/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','575px','325px',this);" /><br /><br />
+<strong>2.</strong>En el campo <strong>Diag. ICD10</strong> seleccionar de la lista el diagnóstico del paciente<br /> 
+En el espacio <strong>Historias Clínicas</strong> se podrán visualizar todos los diagnósticos del paciente que se cargaron en otras ocasiones. <br />
+En el espacio <strong>Observaciones</strong> se pueden agregar comentarios a este diagnóstico y quedará registrado.<br /><br />
+ <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Historia clinica/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','470px','325px',this);" /><br /><br />                
+<strong>3.</strong> Hacer clic en el botón <strong>"Guardar"</strong>.  <br />
+Luego de guardar, se visualizará la impresión del diagnóstico donde se puede imprimir haciendo clic en su respectivo botón.<br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/Historia clinica/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','720px','350px',this);" /><br /><br />  
+<a data-toggle="collapse" data-parent="#accordion" href="#collapfifteen">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+
+       </div>
+    </div>
+  </div>
+   
+   
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapuno">
+         >  ¿Cómo configurar la impresora para imprimir los comprobantes de bonos y turnos? (Windows 7)
+             
+        </a>
+      </h4>
+    </div>
+    <div id="collapuno" class="panel-collapse collapse">
+<div class="panel-body">
+<br /><br />
+<strong><U>PASOS</U></strong><br /><br />
+<strong>1.</strong> Hacer clic en el icono impresora para ingresar al panel de impresión</strong>.<br /><br />
+<strong>2.</strong>Presionar las teclas "Ctrl+Shift+P" o hacer clic sobre el mensaje "Imprimir mediante el sistema de diálogo.."<br /> 
+ <img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/impresora/1.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','720px','400px',this);" /><br /><br />                
+<strong>3.</strong> Seleccionar la impresora que vamos a utilizar y hacer clic en el botón <strong>"Preferencias"</strong>.  <br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/impresora/2.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','430px','350px',this);" /><br /><br />  
+<strong>4.</strong> Ir a la pestaña "Papel/Calidad" y en "El tamaño es:" seleccionar <strong>A5</strong>.    <br /><br />
+<img style="cursor: cell; width: 200px; height: 150px;" src="Imagenes/impresora/3.png" width="200" height="150" title="clic para ampliar imagen" onclick="zoomToggle('200px','150px','500px','400px',this);" /><br /><br />  
+<strong>5.</strong> Aceptar los cambios y por último imprimir con normalidad.<br /><br />
+<a data-toggle="collapse" data-parent="#accordion" href="#collapuno">
+          <u><strong>Cerrar pregunta</strong></u><br /><br />
+      
+              </a>  
+       </div>
+    </div>
+  </div>
+ </div>
+         </form>
+
+</body>
+</html>

@@ -1,0 +1,1117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="ImpresionTurnos">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>30c92ee7-e6e7-4ca7-8873-16762baa8dcc</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Impresion_Turno">
+      <Fields>
+        <Field Name="TurnoMedicoId">
+          <DataField>TurnoMedicoId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TurnoEspecialidadId">
+          <DataField>TurnoEspecialidadId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TurnoFecha">
+          <DataField>TurnoFecha</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="EsTurnoTelefonico">
+          <DataField>EsTurnoTelefonico</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="AutorizanteId">
+          <DataField>AutorizanteId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EsPrimeraVez">
+          <DataField>EsPrimeraVez</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EmiteBono">
+          <DataField>EmiteBono</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EmiteComprobante">
+          <DataField>EmiteComprobante</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Verificado">
+          <DataField>Verificado</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Comentario">
+          <DataField>Comentario</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MotivoCancelacionId">
+          <DataField>MotivoCancelacionId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EsConfirmado">
+          <DataField>EsConfirmado</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ConfirmadoBono">
+          <DataField>ConfirmadoBono</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Turno_Id">
+          <DataField>Turno_Id</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="AutorizanteNombreYApellido">
+          <DataField>AutorizanteNombreYApellido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Seccional">
+          <DataField>Seccional</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ObraSocial">
+          <DataField>ObraSocial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="apellido">
+          <DataField>apellido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="documento">
+          <DataField>documento</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="cuil">
+          <DataField>cuil</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="TelefonoTurnos">
+          <DataField>TelefonoTurnos</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HoraAtencionPersonal">
+          <DataField>HoraAtencionPersonal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HoraTurnosAtencion">
+          <DataField>HoraTurnosAtencion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Consultorio">
+          <DataField>Consultorio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RazonSocial">
+          <DataField>RazonSocial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EsSobreTurno">
+          <DataField>EsSobreTurno</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Medico">
+          <DataField>Medico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Especialidad">
+          <DataField>Especialidad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PacienteTelefono">
+          <DataField>PacienteTelefono</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nombre">
+          <DataField>nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>ImpresionTurnos</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>ImpresionTurnos</rd:DataSetName>
+        <rd:SchemaPath>C:\Gerardo\UOM 11-03-2013 Fyg\App_Code\Impresiones\ImpresionTurnos.xsd</rd:SchemaPath>
+        <rd:TableName>H2_Impresion_Turno</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>H2_Impresion_TurnoTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet1">
+      <Fields>
+        <Field Name="Id">
+          <DataField>Id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RazonSocial">
+          <DataField>RazonSocial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calle">
+          <DataField>Calle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nro">
+          <DataField>Nro</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Piso">
+          <DataField>Piso</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Depto">
+          <DataField>Depto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CP">
+          <DataField>CP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LocalidadId">
+          <DataField>LocalidadId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Provincia">
+          <DataField>Provincia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Observacioens2">
+          <DataField>Observacioens2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Telefono">
+          <DataField>Telefono</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Fax">
+          <DataField>Fax</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LocNombre">
+          <DataField>LocNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NroInscripcion">
+          <DataField>NroInscripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Observaciones">
+          <DataField>Observaciones</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Director">
+          <DataField>Director</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NroCuit">
+          <DataField>NroCuit</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>ImpresionTurnos</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CentroDAL</rd:DataSetName>
+        <rd:SchemaPath>F:\Mis Documentos\Hospitales_UOM\App_Code\DAL\CentroDAL.xsd</rd:SchemaPath>
+        <rd:TableName>H2_Turnos_Centro_Unico</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>H2_Turnos_Centro_UnicoTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Fecha y Hora:</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.20461cm</Top>
+        <Left>0.25612cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>2.31479cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Profesional:</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.77286cm</Top>
+        <Left>0.25612cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>2.31479cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Especialidad:</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.77286cm</Top>
+        <Left>7.00299cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>2.36771cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Consultorio:</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.20461cm</Top>
+        <Left>7.00299cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>2.36771cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line2">
+        <Top>1.44342cm</Top>
+        <Left>0.25612cm</Left>
+        <Height>0cm</Height>
+        <Width>13.50221cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox8">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="&lt;b&gt;Paciente: &lt;/b&gt; " + First(Fields!apellido.Value, "Impresion_Turno")</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>1.54926cm</Top>
+        <Left>0.25612cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>13.10979cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=IIf(UCase(First(Fields!Seccional.Value, "Impresion_Turno").ToString()) &lt;&gt; "OBRA SOCIAL", "&lt;b&gt;Seccional: &lt;/b&gt; " + First(Fields!Seccional.Value, "Impresion_Turno"), "")</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>3.38045cm</Top>
+        <Left>0.25612cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>13.10979cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="&lt;b&gt;Obra Social: &lt;/b&gt;" + First(Fields!ObraSocial.Value, "Impresion_Turno")</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>3.98045cm</Top>
+        <Left>0.25612cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>13.10979cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="&lt;b&gt;NHC:&lt;/b&gt; " +  First(Fields!cuil.Value, "Impresion_Turno").ToString()</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>2.75604cm</Top>
+        <Left>0.25612cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>13.10979cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="&lt;b&gt;Observaciones:&lt;/b&gt;" + First(Fields!Comentario.Value, "Impresion_Turno")</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>4.60515cm</Top>
+        <Left>0.25612cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>13.10979cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line3">
+        <Top>5.24043cm</Top>
+        <Left>0.25612cm</Left>
+        <Height>0cm</Height>
+        <Width>13.50221cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Usted fue atendido por "+ First(Fields!nombre.Value, "Impresion_Turno") +" el dia "+ DateTime.Now.ToShortDateString() +" a las "+DateTime.Now.ToString("HH:mm")+" hs."</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>5.36153cm</Top>
+        <Left>0.25612cm</Left>
+        <Height>0.36188cm</Height>
+        <Width>13.10979cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Format(First(Fields!TurnoFecha.Value, "Impresion_Turno"),"dd/MM/yyyy HH:mm") + "hs."</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.17639cm</Top>
+        <Left>2.67674cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>4.14986cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Medico.Value, "Impresion_Turno")</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.77286cm</Top>
+        <Left>2.67674cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>4.14986cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Consultorio.Value, "Impresion_Turno")</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.20461cm</Top>
+        <Left>9.51181cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>3.8541cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Especialidad.Value, "Impresion_Turno")</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>9pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.77286cm</Top>
+        <Left>9.47654cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>3.88937cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PiePagina2.Value</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>5.72341cm</Top>
+        <Left>0.25612cm</Left>
+        <Height>0.44125cm</Height>
+        <Width>13.10979cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Turnos Telefónicos de " + First(Fields!HoraTurnosAtencion.Value, "Impresion_Turno") + " al " + First(Fields!TelefonoTurnos.Value, "Impresion_Turno")</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>6.16466cm</Top>
+        <Left>0.25614cm</Left>
+        <Height>0.33542cm</Height>
+        <Width>13.10979cm</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="&lt;b&gt;Teléfono: &lt;/b&gt; " + First(Fields!PacienteTelefono.Value, "Impresion_Turno")</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>2.14898cm</Top>
+        <Left>0.25612cm</Left>
+        <Height>0.49417cm</Height>
+        <Width>13.10979cm</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox24">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Turnos Personalmente de " + First(Fields!HoraAtencionPersonal.Value, "Impresion_Turno")</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>6.50008cm</Top>
+        <Left>0.25614cm</Left>
+        <Height>0.38834cm</Height>
+        <Width>13.10979cm</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>2.77413in</Height>
+    <Style />
+  </Body>
+  <ReportParameters>
+    <ReportParameter Name="Logo">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PiePagina2">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PiePagina4">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Width>5.42917in</Width>
+  <Page>
+    <PageHeader>
+      <Height>2.68173cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="Logo">
+          <Source>External</Source>
+          <Value>=Parameters!Logo.Value</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.09525cm</Top>
+          <Left>0.25612cm</Left>
+          <Height>1.5cm</Height>
+          <Width>1.5cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Line Name="Line1">
+          <Top>2.54803cm</Top>
+          <Left>0.25612cm</Left>
+          <Height>0cm</Height>
+          <Width>13.50221cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="Textbox25">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="Teléfono: " + First(Fields!Telefono.Value, "DataSet1")</Value>
+                  <MarkupType>HTML</MarkupType>
+                  <Style>
+                    <FontSize>9pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>1.17178cm</Top>
+          <Left>1.86195cm</Left>
+          <Height>0.38833cm</Height>
+          <Width>11.53925cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox26">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!Calle.Value, "DataSet1") + " " + First(Fields!Nro.Value, "DataSet1") + " " + First(Fields!LocNombre.Value, "DataSet1")</Value>
+                  <MarkupType>HTML</MarkupType>
+                  <Style>
+                    <FontSize>9pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.59824cm</Top>
+          <Left>1.86195cm</Left>
+          <Height>0.46771cm</Height>
+          <Width>11.53925cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox27">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!RazonSocial.Value, "DataSet1")</Value>
+                  <MarkupType>HTML</MarkupType>
+                  <Style>
+                    <FontSize>9pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.09525cm</Top>
+          <Left>1.82666cm</Left>
+          <Height>0.46771cm</Height>
+          <Width>11.53925cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox28">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="COMPROBANTE DE RESERVA DE TURNO"</Value>
+                  <MarkupType>HTML</MarkupType>
+                  <Style>
+                    <FontSize>9pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextDecoration>Underline</TextDecoration>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>1.77164cm</Top>
+          <Left>0.29141cm</Left>
+          <Height>0.6cm</Height>
+          <Width>13.10979cm</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageHeight>21cm</PageHeight>
+    <PageWidth>14.8cm</PageWidth>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <EmbeddedImages>
+    <EmbeddedImage Name="logoprint">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAEIAAAA9CAYAAAAZIL/8AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7OHOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAWIklEQVR4Xs1bB3xUZfa9mSSTXkkCJAQILYSOYAEUBSnS9A8YpLuWgCgroruKgLIgiogNV5oRREAEYWVRDB2VIoQuSgnFQBICIb33ZM/5XmYymbwJBAH/198IzLzyfefdeu59duUQuUNSXFwqw4atkMSrWeLk5CB6t+Zq7OxENvznb+Ln536HViZiuNV3SkvLrfGSZbilCXo77Nj6I1IuZWX4P8CwJde7x83s6ZYCsWbtMRkSvkKuXMnWXQsBKC8vU09cDwR+pwkP1N9OQkKGDH18haxbd/xm9mvznFsCxIHoOOnTL1LmzN0l8XHpMmPWNt0bGo324ubmqGsSphMIlqPRQfzruOleY8as7ZJwOV1mv7ND+vaPlEOH428JIHZ/xkccOZIgU6b9IIcOJUhoCz9xdsIm8V9mZr5Mea2XjBjeAX8vkBO/X5EL51IlOvqSHP01QYyO9mIw2H4G+flFEtayrnTtEiLNm/tJp04NxMvLWVatPirvvbtLvOu4KI0pLCyWmLMp0uXehjLnnQHSoUPQTYNyU0Ds339RvoYZ7NhxVhwc7KWOn6uUlVauIS+vSIKDvaVRQx85ciReUtPypaCgCA7SKL6+LmJvXwmCyRosXXZZWblkZORLHgAxQjt8vF2lVeu6ci0pW65ezRYXF0fzzQz2IqmpeVICR9ynT0sZ8URHuRfA1FZqDcSiJfvl/fd3ibOzUXx8XABEpfOrvHk5Nl4ifLJubk4KLAcHzf7LSsuluKRUSkrK8SnDp1S5AweA4+hoUCDxeHts0M7OIKWl2jH5+cUKFGdnBxxd1ZMSTF6LgBQWlsiUKT1l3LP31QqLWgNx7Nhl6T8wUkJD/WHrNbh2Lhc/
+l8E55uYUSXZ2kRQVlahNe3i4iKeHUbx9nPGnK7aFY3KLJS09X3JwbGZmnvIjBMbN1Uk8PJ0ADJCh4dUQ7HnO2bPJsmPbeGnTpv7tBYJXXwytmDN3pzRu5Kt7szLEP2pEbm6ROMAfdGwfBDsPki5dm0ib1gHi4lyp2noXoNacPH1Vog/ES/QR+JXDlyUvr1BcXY3KLCxNy/L8S5fS5c03esvTT91TKxB4cA0aQej1n3h6ep5EjF8nly5lYHGVm6IG0Dka8GdDgNS1SyMJf7yDNG7sU+uFWZ5wLTlHNmz4TXbuOi+xf6Qq0/LygsO0EJpOcLCPLI0MF2/vqr9ZmqytPdXaNHjR33+7ItPejJKkpFyVIRKAoqJSuXAhVR58sImMGdVJej7cHGptrAbA+fOpErXltKTBng32BBqGAT/g4uIgLZr7y+DBbW2CVgo/sHdfrIoe3286JQ2DvZSW0FyYtbq7GeEfHpaePZrVGnibQMTEpMhRePwRIztWueievRfluQnr4AQ1NWUSlJGRp3zA3HcHSP9+LdXi9GTB4l8k8rP9Ah+I7TNyVBo87duAa5XB7xw7Mtl8+uIl0ZKWli1TX+9l/o6b3rHznEydFqVMMCDAQ12roKBYsqCRU6f0kjFjO1VZQlTUKQkK8pb27QN112YzmC9fflCeee4b6dV7kWzbdlad/OPPFyQ8fDnU0kmZBMNc4tVMxPoAOXJ4sjw+tJ0ZhOO/JkrEc+skOSVHnfsNMsEPP/hJnefpDgfowQ+cpadzxZ8u4uZuhPcvwT2XqAyU4uzsLG+/s02atZgjM2Zuk8TELDhRe+n3SEs5euhleRiadxkJFqMLH4yfv5u88tp3Evl5tDp/HzRo8NAvZfDjy+Wj+XvUcXqiqxFRm0/Lq69tUuGR3jwnt1A6I6mJgUd2QghjGCsqKlaxPjy8g8yc0dd87TNnrsmChftk/YYTiP8ucih6kiocnh2/Xk6fugr7da7w/OVKi/hE+R2z
+TtYY9jCX+Ph0+ejDwTJoYJh8ueIEHPMm8ffzhClmIQwZ5N+fDpa+fULN91wCLeM9jTBTd4TrMiQ1XHcoHtBxJnBO9nh4rioHeWN6LxkN07WWahpRAsQiIw+IPfIDemc+uXp1PYQbpD/ggrn4pKQcmfjCA5UgQLW/gBY9/cwa2brtjDRCQlXHx1WFPapsagqfpJZzUJOSkBwxaxw7ppNkZxVIFj5MNvkbc4+Ys9fMa2WyxusEBnqLq7uDzJ33Y5V9jB/XRWa82Ufy84olDw+NWSu148zZJCR77gDaVR3vib0sidyv7nVdIObP3yu/nkgUb3hlyyqRauyIRIeqlZGVhxT6YXl+Qlfz9RbBlt+H6pcg9NEWKbR7+pAy/In9VRRbglyhQIYOaS8rlo/AdXrKyhWjxK+Oq0qaKKooqxaxtByCESHxcqb5WNMChg5ph/R7oOQiqy0uLqt4iM4Axc68D5pe8rUceXXKDzUDkQtEZ83aIg0aaBuphhoWSC5h5BN3ScSz91b5uQgZnZPRUT0JPlVLodrREWrgoKgCoIMGtlYaRunQIVC6dWsiBQBCq0x1b6/OZRJH97F1u+a3LGXAgDB5HQ8oMTFD9xo8v359L/n666Ny6lRStTWavxjz5GpphhBWWQ5XHsvFXUvOle73N1VJC+Uq1JuFD8WOyNvagdWCqSGlFmDx39CdGrNGdY8KgFzcHGTv3j900Ro9uhMSqnslISFTFww+pFat6srfJ22QQvg5k5h9xCf/3ov84LJ4wYvriaa25fLBvEHq50L4iSmvb1b5w02JhfOm/ii2quaM3Xwb1iUXkczZkulwiI0b+yLs5uqCQa2NB6/x1ls71J4oZiD8EXa8vdzlfGyySnCsJS4+Q+bOGYDqUXM8i+Cpd+8+Lx5u+sDVBpwb3L/5ko6ODmqTfyDL1BP6l5kz6DxLVDFmLRdiU8QFlAHNxEQXmoEYMbyjHIx+UZ4f/wDK5jw4nBLz+fSyfXqHSo8e
+zdV3R48mIFztgRcGCLXdRW0QsnEsK9k81DHnzqfYvNp99zWWIXCg2dmF5mNYxV6Ds3wCaf+vx1+RF57vqircKhphOnrKaz1k/bonVShi8VSKKECfMQSpL7NJyrz3f1Yaxbhti1K7Bfu1eQmGR5bb1g7v5MmrihSiMB8ZMrStuLg6aKU+1puRUSCLFgyW9+Zq5m0pupnlnj2xUlBYquIxnWH9ep7Sq5emDSRaDkTHir+/e7XocDs3b31tqnRsbBrWp/modetPyMjRX8mklzZKBtJsyr13N5TgBj4q1DKMspL/btNpxYlcFwie9N+NvylukZrAZKhd+/rmAmr+J/vEHSnyDQaI24YNyZvzF5JVkrZy1RGZOv0H9ff9By7K6LGrzfdldpqfTzMvR2g3gi6MA1B51wciOTVHUlLyVBpN1BlumKxQSKzs2HVOOcw72A7RBZM5CDPcKVOjUItslwBoKB9QYKCnHDkUJyeRzlP69WuFesZJJVlG5Dl0sudQAVfTiJSUXFXIXEEeThs6fChesnPyga6DMotAZImdO2qk6GeR0Ui5qSm3hPz+U9pCipBAbN58UuqiBKCGaOm7SN16HrJo8QF1fX8/N2nazE9pNp1sIcL9YZDNdKLcMz+sQQxz5/0EkuUbmfjitzL+ufXy2ecHEEZBn9lpZW1D1AyKaYHs339JPID6X60NJgRpCr6+7IZVDV3OYMAuXUozA90qrC4YriK17roo2b/97wmJGLde7fn5id/KS5M3ioFoxMamShxoLtpcBnhDU+pbWFCqyBIK0c7MgqYA+f8/oh+76RhZHfNpU1qH1YPz19IBFo0klc+dv6bAiotLQ3KVLgaix0yLoZE25oREwyTFSEYCgzzVP+ORshYXI7v8q73kDTwFLpHRhBUuJSSkjmKwKjUJ5Tr2SmLYFXsnR2IwVZh67DBJkvr1YRoQlrclxcwpbmAlt/kQ+i5bBAtvzWhH56hFCxHfOs5q3bZMmnuv0eux
+0nOCHVJKUPIpOvcvBIILJgghIX4q0buerzL97mDvgIZBzQ6+xl/pMIuALMURLSVGi5r6CrdZEdRDIInTv18LcB6eygEqvgOhwrqm4PMyVES3klIkh4CiJjHRBLpP2sHBAXaWqc4nU8XwUyUnq6HZcjtAUR0tmHo56LrJLz2onCGbQfQHTABpyhTVHGLDGWwWJQ21EzkMPXpBMyWAxjycfQIWWfyUAj2TAAcQoxoQTFRUxKggVbUL8Aq3Y8u2r8lbZiEHaNOmnopozZr5y949E5FK+0JDNH6BQDg5GaSeYrdFLl7MwL8rox05zaKK/dKJ8qMyBAPqe25Ka6vZmcFgRDl7Ltm8Kk6wFBWZVIxETM3qdrsgoqMkb/LRh4/JN2vGgA/NlX2//KEiAYWmYjQaxT9Am7g5deqKOSUgxUA60RF7JZnEUEuTN5DEWLV8lHy2JFxxiE/97W6oUr7yBQQiLo4aodlAjx5NQXyCHAV6TGbSoXI/79aYojvpO5g9UjqgR8EHuBrUWxGeqvYgEeGgGc0r8h8FxOkkcw8m6Vq2PDqoDXjSkRKJPUdGDpOFC4aIoUmIr1KzVkg6QvD3Pr3ZoHFU6sKc4jL4v+PHr6gbPDm2s+QXFlXQbAapA8KVTRaKszPN5g47DdyX4wBLlx2UwPqeFWSxNiYwcWI3tS42ls+dT1MPlR14VtQ9H2omjRr5qD0z2eIsRjUL98Osg2YCJZoDxd6+RY/CJP/3aFtJBnfJ30i7J6dmy9z3flSFGOn4O43FtDe3qKWx9qBkgSFvgX5GCDZK2YweTVZmrmoK0Qf6+rL2qGPej+kv1YBglvnooNaqk808gv8+eixBAUN5fkIXFctZlfJT199TvvvupHz3/Unlue8kU3MCPdjd6L5p1bDmvNPgLyZP7m7e6PdYF7WBvo/h9u7ODdTgibXo+nw2cokgnQ7NIzExG73G8+pcqlOfvi1UxUpHww9rnpgYNmS0KbnbLWSfKEuXRUse
+CkM2olQ0QY7B6NGndwv1+2GMNsWha8aHyUjCJKx//zDFXl0XiFmzd8jj4SuVB9ZYHSYs5co8TA2YF1/orrw2tYZCtTQ1hG83CNwQu96MEmvXHkelrJHH7NClpGSDmX5EaQB7pxuw5pycYvVQKWxhvvTyRlVtWrVeKn3EKrA8ne/+WJYu/QU+wsV8Mi/ARu0WtPJ/+rFCK9AXeOWVhwBEoUL5zgrCO3bhiakbbZZKq3/S4SBHjewkD9wfopZz8GCCou9IypiEmkN+YuOm38G6zZP5aGGYmlFm0+CARxYImaZN/KtNvPFGgYFemKCLQoqrscIjR3SUx+A4r6AbXkFX1AoPS/hqA6VWWZaoCNe2bX1oaamkoxndDH3UV1/taZ6mmYkxRCZVJidqWhxNNwRDLEwkGV2UaUPMQLzwQjdp2yZIcQ56Zs6ZB3rdV1/fZN7wWzP7qidwAXyG3jnmxo0VRFyMo2OlncLCMWJ04ykqtZCme889wYp6Y7f9k48Hq+47hT3YMzFJKkLoRTHmGSR1p0972LyyKndftXIkyJk0XXaaNkV2ZztmJeZVdKPZMf9i6XC06FsijU2DylZmmtysYpitjRG3Zhqfmlo5qkwQk9FdV7XMDaiHqapk0kQf9s3aMSovoKxb/6t8unCvNGzoraKetRgM5XIanf1PPxmi5j1NUgUIF4zuzUJ7PQGMjbXwktxT/UAPWfbFIVmx6rA6hBtmhvbk2LslE8kLTYy+g42Ubt0aizPsuIShtmKH3DSLuQ8+3q2mXljLLFi0T7ZjZtOtomumHaqPiGVUeqh7U/CPL2PYVWPRSCzPemsbkit2sKpTBrw3I+DoUXdJaEvtHF0g+OXEF++Xjh2C1TiQSd35BLKz87XiBFmTJzz17NnbZfnyQ+YLzfxXX4wODZS77gqU9u2CZMJzXeXt2f3Nv3PGVOtmi8pcs3D9p55eIz17LZTZb+8AAetmtlflwEABVIpiQhToHCnIgvlSSNqS
+Q6Vs+uEU8oeNKmKQjmM9wmN5LdM+OLrIHs2771SuyyYQ9tjouIj7VGHCi2VnFyjKq2VoPcUAEwzSW75Ir+fBFt97/yfzehmj5380GMXQo/IPRBWGOYorhlMDAjzVuRpThO+QlTZpUkfNP4W1DNDa/WSKABhtuHXryjlJ07DJBXCqwXB0w8LbV3maK1celunTt2AEmrPenJgpU1O7zZoFKBPkFCAlJ6dQIiK6qFEla9H1UH37hspjKEyOHI1HR8tTFnw6VFZ/NUr+hcbquXMpAKREzV0zLkdiAuXJp9aYyVHyFgy3lsKBUfZG+IToN7hQk3ZQw1gDmKb2aVKhoX7ySMVoEHlSTutwcGDe3EdlW1SEtARwJpky9Qc1W+WKrNYN2sFrc+h07Oh7ZO3Xo2XZ0mHSvEWAHDhwCXOeITL8iQ7VQOAXNqfq2GDlQFg4BsQsZTsGNCa9vAHEp7NScaprKppCxeAzOVXHDTipMeHq8iWe3Pz5u5X18wlYKr+JaaJq79/3ovnktWt/x/yTvTzySJj5O7JRP+++IG/M2IIxxVxlIjQdth/Y+5w0sbtMQIPXUnbCHwXUdUdk1J/Ivak5SzZIZszaqkIXO2JUdzZbGDkIxOgxneXB7lqabi00s01RLIQK1FNWdR1Lfgyst8CEv6nHqoskvmTL7ivMWf7n2xMKAGoffRjNjnOdkyY9IAMHtLJ1us3vb27yFjzEMxHr8N5ERpVJed6FUYNhkBT6Qw81lfAhbfEktJbAzUoW/NTGjSdl89YY+QN+gqk+J28t56PYq2gQ5CXLPh+OGe87NHm7cNEvKL13qakUPaGTZYVKL+2KkNjpriC5D8kPZ7HDrMKWLXBiL6bDri+iqRuHdDlOcZM0Rb4VYJ0tmq7Bhs30qb3lWav5rht5ALU2Db6swun8sDDN09sSLWRptB/T8mwMlZeCEacvYJvOy8so9UCm+KC9aLDHyy7gIa9eyUKnrRCDKjlSihSYtQFzCw9M
+8rMXS69SU8JVjpAbcyZZtkaNUwNqtZFaA7EYI0MfIGxqfUc3m+9rsLlCgpST+PQV3FQ5PDpTBNYKmtZUjvbwKRuxWaba2vGsfPm+Bt7rgP3nwxHye41bqCqK3YYDpc/isf/8Zy9M/dVuQr/WQHAJh9B2X73mOEaTzyjilzOSFtk1umLF0iDYE6SNh/yG15hSkXGWABRX5BUs302vMVnXJ5Vdt3LFLdC0+IYONagJfA4TqWRM6luCQT/Bjj7DZj9EluEYgeKUcG3lpoAw3YRc5lS807UPrza1ROw39U05mjwNtvrEsPbKeR7EqEEMiqA9v8RKLGoZvoVjSpVNm7cEhe9mBGHWs1uXxjDBeng1KRjlszuixTH4pp3m1xAYLmNiklH4NZF33u4v7drV7mUVS7D+FBCmC/GtnqkY2EhEMygH89W9QAAvWThE96EMH7UKnh9TbZhe0ROWxwzJP+6coPv7OMx079x1Fm/1GNVI8pzZAzFxX6+2ClDt+BuvfWu4VUcMkmzeHCHTpvVRb/W8NVMbSLUWzmRy5E/rJehfUGvpl4IU1qb6rWXGjN4qWr05va9Eff/sLQGB97glGmG5WJqFrTdouMGBjy3DLHV6lfEDy/Np64w2W7dEYBxI61RZS033uFnVuOVA1LQQhs+X8foDO1OsEPWE5bodQsuHKNx8MN1/p+R/xBwcE2BxU1sAAAAASUVORK5CYII=</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportID>0d2d5b92-25a6-4ada-8e33-a68e6f7cc33b</rd:ReportID>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+</Report>

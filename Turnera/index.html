@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Turnera 2.0</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div class="blackbox">
+<div class="TurnoPrincipal rojo">
+        <div class="TPDato1">GERARDO SANTA CRUZ</div>
+        <div class="TPDato2">CONSULTORIO 10</div>
+</div>
+</div>
+
+<div class="BloquePrincipal">
+<div class="BloqueA">
+<div class="Logo"><img src="img/logo.png"/></div>
+</div>
+
+<div class="ContenedorTurnos">
+<div class="fondoturnos"><img src="img/fondoturnos.png"/></div>
+    <div class="Turno rojo" >
+        <div class="Dato1">GERARDO SANTA CRUZ</div>
+        <div class="Dato2">CONS 10</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="Turno">
+    	<div class="turnosombra"></div>
+        <div class="Dato1">CAROLINA HERRERA</div>
+        <div class="Dato2">CONS 05</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="Turno">
+    	<div class="turnosombra"></div>
+        <div class="Dato1">JUAN PEREZ</div>
+        <div class="Dato2">CONS 66</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="Turno">
+    	<div class="turnosombra"></div>
+        <div class="Dato1">ANALIA GENAX</div>
+        <div class="Dato2">CONS 20</div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="Turno">
+    	<div class="turnosombra"></div>
+        <div class="Dato1">LOPEZ LOPEZ</div>
+        <div class="Dato2">CONS 17</div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+</div>
+<div class="Pie">
+    <div class="Media">
+<iframe src="http://www.youtube.com/embed/6v2L2UGZJAM?rel=0" frameborder="0" allowfullscreen></iframe>    </div>
+    <div class="BarraInferior">
+        <div class="boxinformativo">
+            <div class="hora" id="laHora"></div>
+            <div class="tipoContenido"><img src="img/mundi.png"/><div>NOTICIAS</div></div>
+        </div>
+<div class="contenedoriframe">
+<iframe name="pagina" id="noticias" class="iframe" src="RSS.html" scrolling="no" border="0" frameborder="0" target="_blank"></iframe>
+</div>
+
+    </div>
+</div>
+</body>
+</html>
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="js/scripts.js"></script>
+
+<script>
+
+$(document).keypress(function(e) {
+    {$('.blackbox').fadeIn(400);}
+
+
+
+});
+
+$(document).ready(function() {
+  Acomodar();
+});
+
+$(window).resize(function() {
+	Acomodar();
+});
+
+function Acomodar()
+{
+  $('.BloquePrincipal').height($('body').height()-94);
+}
+
+
+	function mueveReloj(){
+    momentoActual = new Date()
+    hora = momentoActual.getHours()
+    minuto = momentoActual.getMinutes()
+    segundo = momentoActual.getSeconds()
+
+    str_segundo = new String (segundo)
+    if (str_segundo.length == 1)
+       segundo = "0" + segundo
+
+    str_minuto = new String (minuto)
+    if (str_minuto.length == 1)
+       minuto = "0" + minuto
+
+    str_hora = new String (hora)
+    if (str_hora.length == 1)
+       hora = "0" + hora
+	
+	if (segundo % 2 == 0)
+	{
+    horaImprimible = hora + "<span style='color:#1f1f1f;'> : </span>" + minuto;
+	}else
+	{
+	horaImprimible = hora + "<span> : </span>" + minuto;
+	}
+	
+
+    $("#laHora").html(horaImprimible);
+
+    setTimeout("mueveReloj()",1000)
+} 
+
+	mueveReloj();
+
+</script>
+	

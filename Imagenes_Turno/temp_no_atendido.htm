@@ -1,0 +1,89 @@
+﻿<script>
+
+    function Guardar_Comentario() {
+        CambiarEstado(TurnoId, 7, false);
+        var array = [];
+
+        
+        var Recitar = false;
+        if ($("#ck_recitar").is(':checked'))
+        {
+            Recitar = true;
+        }
+
+
+
+        var json = JSON.stringify({ "TurnoId": TurnoId, "Comentario": $("#txt_temp_eco_comentario").val(), "InformarProblema": $("#cbo_problema :selected").val(), "Recitar": Recitar })
+        $.ajax({
+            type: "POST",
+            url: "../Json/Imagenes/Imagenes.asmx/IMG_PLANTILLA_ESPECIALIDAD_CAB_GUARDAR",
+            data: json, contentType: "application/json; charset=utf-8", dataType: "json", success: function (Resultado) {
+                var Datos = Resultado.d;
+                ActualizarMensaje("Comentario Guardado", "El comentario ha sido guardado.");
+                OcultarCargaDatos();
+                //Guardado
+            },
+            error: errores
+        });
+
+    }
+
+    function Cargar_Comentario(Turno) {
+        var json = JSON.stringify({ "TurnoId": Turno });
+        $.ajax({
+            type: "POST",
+            url: "../Json/Imagenes/Imagenes.asmx/IMG_PLANTILLA_ESPECIALIDAD_CAB_LISTAR",
+            data: json, contentType: "application/json; charset=utf-8", dataType: "json", success: function (Resultado) {
+                var Datos = Resultado.d;
+                $("#txt_temp_eco_comentario").val(Datos.COMENTARIO);
+                if (Datos.MOTIVO_RECITAR) { $('#ck_recitar').prop('checked', true); } else { $('#ck_recitar').prop('checked', false); }
+                CARGAR_PROBLEMAS_ITEMS(Datos.MOTIVO_PROBLEMA);
+                $("#btn_temp_noatencion").show();
+            },
+            error: errores
+        });
+    }
+
+    Cargar_Comentario(TurnoId);
+
+
+    function CARGAR_PROBLEMAS_ITEMS(Cargado) {
+        var json = JSON.stringify({ "ProblemaID": 0 })
+
+        $.ajax({
+            type: "POST",
+            data: json,
+            url: "../Json/Imagenes/Imagenes.asmx/IMG_TURNO_LISTAR_PROBLEMAS_ITEMS",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (Resultado) {
+                var Datos = Resultado.d;
+                $('#cbo_problema').empty();
+                $('#cbo_problema').append($('<option></option>').val("0").html(""));
+                $.each(Datos, function (index, dato) {
+                    $('#cbo_problema').append($('<option></option>').val(dato.MOTIVO_PROBLEMA).html(dato.COMENTARIO));
+                });
+                $("#cbo_problema").val(Cargado);
+            },
+            error: errores
+        });
+
+    }
+
+    function Volver_Estado_Recepcionado() {
+        CambiarEstado(TurnoId, 2, false);
+        OcultarCargaDatos();
+    }
+</script>
+
+<div id="temp_eco_insumos" style="display:block; height:250px;">
+    Informe algún problema: <select id="cbo_problema"></select>
+    <input type="checkbox" id="ck_recitar" style="margin-top: 0px;" /><label for="ck_recitar" style="display:inline-block">Recitar</label>
+    <input type="text" id="txt_temp_eco_comentario" style="width:90%" placeholder="Comentario"/>    
+    <div>
+        <a id="btn_temp_noatencion" class="btn btn-info" style="display:none;" onclick="javascript:Guardar_Comentario();">Guardar</a>
+        <a class="btn btn-warning" onclick="javascript:Volver_Estado_Recepcionado();">Volver estado recepcionado</a>
+        <a class="btn btn-danger" onclick="javascript:OcultarCargaDatos();">Cancelar</a>
+
+    </div>
+</div>

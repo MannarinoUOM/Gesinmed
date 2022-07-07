@@ -1,0 +1,98 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Principal.aspx.cs" Inherits="Principal" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="css/barra.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.8.3.js" type="text/javascript"></script>
+    <script src="js/JPantalla.js" type="text/javascript"></script>
+    <title></title>
+
+<style>
+
+.btn-novedades {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+	background-color:#79bbff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #528ecc;
+}.btn-novedades:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+	background-color:#378de5;
+}.btn-novedades:active {
+	position:relative;
+	top:1px;
+}
+
+
+body{font-family:Verdana, Geneva, sans-serif}
+</style>
+</head>
+<body>
+    <div>
+        <div id="Novedades" class="DivNovedades" style="height:600px; overflow-x:hidden; overflow-y:auto; padding-top: 100px;">
+          <div style="width:800px;margin-left:auto;margin-right:auto">
+
+          <div style="position: relative; top: 200px;left: 330px;">
+          <a href="#TituloLasNovedades" style="display:none;" class="btn-novedades">Ver Novedades</a>
+          </div>
+			
+            <img src="img/Novedades/logoGris.jpg"/>
+            <div class="TituloNov"><asp:Literal ID="LSeccional" runat="server"></asp:Literal></div>
+            <div class="BienvenidoUsuario"><asp:Literal ID="LUsuario" runat="server"></asp:Literal></div>
+
+            <br /> 
+            <img style="text-align:center;width:100%" src="img/Novedades/sombra_inferior.jpg"/>
+<%--            <div class="TituloLasNovedades">Soporte técnico</div>
+            <div class="box_gris_novedades">
+            <img src="img/Novedades/icoskype.jpg"/>
+            <div>Utiliza Skype para comunicarte con nosotros</div>
+            </div>--%>
+            
+<%--            <div class="box_gris_novedades">
+            <img src="img/Novedades/ico_telefono.jpg"/>
+            <div>
+            Teléfono / Fax: 4632 5910
+            Horario de atención 
+            Lunes a viernes de 9-18hs
+            </div>
+            </div>--%>
+
+            <%--<div class="TituloLasNovedades" id="TituloLasNovedades">Últimas novedades</div>
+            <div class="FechaNovedad">07 de Enero de 2014</div>--%>
+<%--            <div style="text-align:center">
+            <div><a href="http://download.teamviewer.com/download/version_7x/TeamViewer_Setup.exe"><img src="img/teamviewer.jpg"  /></a></div>
+                <div><a href="http://download.teamviewer.com/download/version_7x/TeamViewer_Setup.exe">Descargar TeamViewer 7</a></div>
+            </div>--%>
+<%--            <audio loop id="sonido" src="sonido/CHIKEN_DANCE.mp3" type="audio/mpeg" autoplay>
+            </audio>
+--%>
+            <%--<div class="FechaNovedad">11 de Marzo de 2013</div>
+            <img src="img/Novedades/TurnosDelDia.png" /><br />
+            <div class="FechaNovedad">10 de Marzo de 2013</div>
+            <img src="img/Novedades/OSNuevo.png" /><br />
+            <div class="FechaNovedad">8 de Marzo de 2013</div>
+            <a href="Ayuda/AtSinTurnoAyuda2.aspx"><img src="img/Novedades/AtSinTurnos.png" /></a>     --%>       
+        </div></div>
+    </div>
+
+</body>
+</html>
+
